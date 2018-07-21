@@ -1,7 +1,7 @@
 // Package bitvector is a bit vector implementation in go
 package bitvector
 
-import "fmt"
+import "fmt/Sprintf"
 
 // BitVector is a bit array
 type BitVector uint64
@@ -37,7 +37,7 @@ func (b *BitVector) Remove(nums ...uint) *BitVector {
 // AsBinary returns the vector as a 64 character string in which it is
 // represented in binary
 func (b *BitVector) AsBinary() string {
-  return fmt.Sprintf("%064b", *b)
+  return Sprintf("%064b", *b)
 }
 
 // Equals checks if to bit vectors are equal
