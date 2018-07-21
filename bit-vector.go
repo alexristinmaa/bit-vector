@@ -56,26 +56,26 @@ func (b *BitVector) AsBinary() string {
 }
 
 // Equals checks if to bit vectors are equal
-func (b *BitVector) Equals(a *BitVector) bool {
+func (b *BitVector) Equals(other *BitVector) bool {
   return a.AsBinary() == b.AsBinary()
 }
 
 // And ands (&) two bit vectors
-func (b *BitVector) And(a *BitVector) *BitVector {
+func (b *BitVector) And(other *BitVector) *BitVector {
   *b &= *a
 
   return b
 }
 
 // Or ors (|) two bit vectors
-func (b *BitVector) Or(a *BitVector) *BitVector {
+func (b *BitVector) Or(other *BitVector) *BitVector {
   *b |= *a
 
   return b
 }
 
 // Xor xors (^) the two bit vectors
-func (b *BitVector) Xor(a *BitVector) *BitVector {
+func (b *BitVector) Xor(other *BitVector) *BitVector {
   *b ^= *a
 
   return b
