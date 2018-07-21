@@ -1,6 +1,4 @@
-// Bit-vector is a bit vector implementation in go
-// It is a simple implementation for anyone who wants to use bit vectors/arrays with a basic range of usage 
-// but still requires more specific operations such as bitwise and equals.
+// Package bitvector is a bit vector implementation in go
 package bitvector
 
 // BitVector is a bit array
@@ -86,6 +84,20 @@ func (b *BitVector) Xor(other *BitVector) *BitVector {
 // Clear clears the entire bit vector
 func (b *BitVector) Clear() *BitVector {
   *b = 0
+
+  return b
+}
+
+// ShiftL shifts the bit vector to the left n steps
+func (b *BitVector) ShiftL(n uint) *BitVector {
+  *b <<= n
+
+  return b
+}
+
+// ShiftR shifts the bit vector to the right n steps
+func (b *BitVector) ShiftR(n uint) *BitVector {
+  *b >>= n
 
   return b
 }
