@@ -1,4 +1,4 @@
-// Package bitvector is a itvector implementation in go
+// Package bitvector is a bit vector implementation in go
 package bitvector
 
 import "fmt"
