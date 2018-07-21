@@ -1,4 +1,6 @@
-// Package bitvector is a bit vector implementation in go
+// Bit-vector is a bit vector implementation in go
+// It is a simple implementation for anyone who wants to use bit vectors/arrays with a basic range of usage 
+// but still requires more specific operations such as bitwise and equals.
 package bitvector
 
 // BitVector is a bit array
