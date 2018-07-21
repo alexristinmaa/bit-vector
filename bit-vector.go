@@ -14,7 +14,7 @@ func (b *BitVector) Add(nums ...uint) *BitVector {
 
 // Has checks if the bit vector has an unsigned integer in it
 func (b *BitVector) Has(nums ...uint) bool {
-	for _, n := range nums {
+  for _, n := range nums {
     if(!b.has(n)) {
       return false
     }
