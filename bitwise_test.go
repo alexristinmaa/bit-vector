@@ -44,3 +44,25 @@ func TestClear(t *testing.T) {
     t.Error("Expected 0000000000000000000000000000000000000000000000000000000000010010, got", a.AsBinary())
   }
 }
+
+// TestShiftL tests the ShiftL function
+func TestShiftL(t *testing.T) {
+  a := new(BitVector).Add(0,1,2,3,4,5,6,7,8,9)
+
+  a.ShiftL(2)
+
+  if a.AsBinary() != "0000000000000000000000000000000000000000000000000000111111111100" {
+    t.Error("Expected 0000000000000000000000000000000000000000000000000000111111111100, got", a.AsBinary())
+  }
+}
+
+// TestShiftR tests the ShiftR function
+func TestShiftR(t *testing.T) {
+  a := new(BitVector).Add(0,1,2,3,4,5,6,7,8,9)
+
+  a.ShiftR(2)
+
+  if a.AsBinary() != "0000000000000000000000000000000000000000000000000000000011111111" {
+    t.Error("Expected 0000000000000000000000000000000000000000000000000000000011111111, got", a.AsBinary())
+  }
+}
